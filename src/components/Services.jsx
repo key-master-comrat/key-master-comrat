@@ -1,7 +1,7 @@
 import { Car, Cpu, KeyRound, LockKeyhole, RadioTower } from "lucide-react";
 import { services } from "../data/content";
 
-const icons = [KeyRound, Car, Cpu, LockKeyhole, RadioTower];
+const icons = [KeyRound, Car, LockKeyhole, RadioTower];
 
 export default function Services() {
   return (

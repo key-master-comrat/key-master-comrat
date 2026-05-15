@@ -19,14 +19,32 @@ export default function Contacts() {
 
       <div className="glass-card rounded-[26px] p-6">
         {/* Телефон */}
-        <div className="flex items-start gap-4 mb-5">
-          <Phone className="text-[#3B93FF] mt-1" size={22} />
+        <div className="flex flex-col gap-5 mb-6">
+          <a href="tel:+37379447805" className="flex items-start gap-4">
+            <Phone className="blue-icon mt-1" size={28} />
 
-          <div>
-            <p className="text-white font-semibold text-[18px]">
-              {businessInfo.phone}
-            </p>
-          </div>
+            <div>
+              <p className="text-sm text-gray-400 font-medium">
+                {" "}
+                {businessInfo.name1}
+              </p>
+
+              <p className="text-[24px] font-[700]"> {businessInfo.phone1}</p>
+            </div>
+          </a>
+
+          <a href="tel:+37379927900" className="flex items-start gap-4">
+            <Phone className="blue-icon mt-1" size={28} />
+
+            <div>
+              <p className="text-sm text-gray-400 font-medium">
+                {" "}
+                {businessInfo.name2}
+              </p>
+
+              <p className="text-[24px] font-[700]"> {businessInfo.phone2}</p>
+            </div>
+          </a>
         </div>
 
         {/* Адрес */}
@@ -41,10 +59,7 @@ export default function Contacts() {
         </div>
 
         {/* Главная CTA */}
-        <a
-          href={businessInfo.phoneLink}
-          className="primary-button mb-4"
-        >
+        <a href={businessInfo.phoneLink} className="primary-button mb-4">
           <Phone size={20} />
           Позвонить
         </a>
@@ -71,10 +86,7 @@ export default function Contacts() {
             Telegram
           </a>
 
-          <a
-            href={businessInfo.viberLink}
-            className="messenger-button viber"
-          >
+          <a href={businessInfo.viberLink} className="messenger-button viber">
             <MessageCircle size={18} />
             Viber
           </a>
@@ -101,10 +113,7 @@ export default function Contacts() {
         </div>
 
         {/* Карта */}
-        <button
-          onClick={() => setShowMap(!showMap)}
-          className="outline-button"
-        >
+        <button onClick={() => setShowMap(!showMap)} className="outline-button">
           <MapPin size={30} />
 
           {showMap ? "Скрыть карту" : "Открыть карту"}
@@ -113,9 +122,7 @@ export default function Contacts() {
         {/* Карта */}
         <div
           className={`overflow-hidden transition-all duration-500 ${
-            showMap
-              ? "max-h-[500px] opacity-100 mt-5"
-              : "max-h-0 opacity-0"
+            showMap ? "max-h-[500px] opacity-100 mt-5" : "max-h-0 opacity-0"
           }`}
         >
           <div className="rounded-[22px] overflow-hidden border border-white/10">

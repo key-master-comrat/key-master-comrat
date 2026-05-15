@@ -1,7 +1,7 @@
-import { BadgeCheck, Clock, Settings, ShieldCheck } from "lucide-react";
+import { ShieldCheck, UserRound, KeyRound, Clock3 } from "lucide-react";
 import { benefits } from "../data/content";
 
-const icons = [Clock, ShieldCheck, Settings, BadgeCheck];
+const icons = [ShieldCheck, UserRound, KeyRound, Clock3];
 
 export default function WhyUs() {
   return (
