@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ className = "" }) {
   return (
     <footer className="bg-transparent text-gray-400 text-center px-6 pt-4 pb-10 text-sm">
       <p className="font-medium tracking-wide">
@@ -12,9 +12,14 @@ export default function Footer() {
       <p className="mt-4 text-xs leading-relaxed text-gray-500">
         Сайт разработан и поддерживается:
         <br />
-        <span className="text-gray-300 font-semibold">
+        <a
+          href="https://www.instagram.com/sledagency_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 font-semibold underline underline-offset-4 hover:text-[#3B93FF] transition"
+        >
           SLED — Агентство цифровых решений
-        </span>
+        </a>
       </p>
     </footer>
   );

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Phone,
   MessageCircle,
@@ -11,8 +10,6 @@ import {
 import { businessInfo } from "../data/content";
 
 export default function Contacts() {
-  const [showMap, setShowMap] = useState(false);
-
   return (
     <section className="page-section">
       <h2 className="section-title">Контакты</h2>
@@ -22,17 +19,17 @@ export default function Contacts() {
         <div className="flex flex-col gap-5 mb-6">
           <a
             href={businessInfo.phoneLink1}
-            className="flex items-start gap-4"
+            className="flex items-center gap-5"
             aria-label={`Позвонить: ${businessInfo.name1}`}
           >
-            <Phone className="blue-icon mt-1 shrink-0" size={28} />
+            <Phone className="blue-icon shrink-0" size={28} />
 
             <div>
-              <p className="text-sm text-gray-400 font-medium">
+              <p className="text-sm text-gray-400 font-medium mb-1">
                 {businessInfo.name1}
               </p>
 
-              <p className="text-[24px] font-[700]">
+              <p className="text-[24px] font-[700] leading-none">
                 {businessInfo.phone1}
               </p>
             </div>
@@ -40,17 +37,17 @@ export default function Contacts() {
 
           <a
             href={businessInfo.phoneLink2}
-            className="flex items-start gap-4"
+            className="flex items-center gap-5"
             aria-label={`Позвонить: ${businessInfo.name2}`}
           >
-            <Phone className="blue-icon mt-1 shrink-0" size={28} />
+            <Phone className="blue-icon shrink-0" size={28} />
 
             <div>
-              <p className="text-sm text-gray-400 font-medium">
+              <p className="text-sm text-gray-400 font-medium mb-1">
                 {businessInfo.name2}
               </p>
 
-              <p className="text-[24px] font-[700]">
+              <p className="text-[24px] font-[700] leading-none">
                 {businessInfo.phone2}
               </p>
             </div>
@@ -58,8 +55,8 @@ export default function Contacts() {
         </div>
 
         {/* Адрес */}
-        <div className="flex items-start gap-4 mb-7">
-          <MapPin className="blue-icon mt-1 shrink-0" size={27} />
+        <div className="flex items-center gap-5 mb-7">
+          <MapPin className="blue-icon shrink-0" size={27} />
 
           <div>
             <p className="text-white font-medium leading-[1.5]">
@@ -134,33 +131,17 @@ export default function Contacts() {
           </a>
         </div>
 
-        {/* Кнопка карты */}
-        <button
-          type="button"
-          onClick={() => setShowMap((prev) => !prev)}
-          className="outline-button"
-        >
-          <MapPin size={30} />
-          {showMap ? "Скрыть карту" : "Открыть карту"}
-        </button>
-
-        {/* Карта */}
-        <div
-          className={`overflow-hidden transition-all duration-500 ${
-            showMap ? "max-h-[500px] opacity-100 mt-5" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="rounded-[22px] overflow-hidden border border-white/10">
-            <iframe
-              title="KEY MASTER location"
-              src={businessInfo.mapEmbed}
-              width="100%"
-              height="320"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+        {/* Статичная карта */}
+        <div className="mt-5 rounded-[22px] overflow-hidden border border-white/10">
+          <iframe
+            title="KEY MASTER location"
+            src={businessInfo.mapEmbed}
+            width="100%"
+            height="320"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>

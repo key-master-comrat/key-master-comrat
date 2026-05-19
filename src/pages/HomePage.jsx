@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Services from "../components/Services";
-import Gallery from "../components/Gallery";
+
 import WhyUs from "../components/WhyUs";
 import Slogan from "../components/Slogan";
 import Contacts from "../components/Contacts";
@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className="min-h-screen bg-black/28">
           <Hero />
           <Services />
-          <Gallery />
+          
           <WhyUs />
           <Slogan />
           <Contacts />
@@ -28,3 +28,4 @@ export default function HomePage() {
     </main>
   );
 }
+

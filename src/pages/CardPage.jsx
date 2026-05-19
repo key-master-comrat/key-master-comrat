@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  ArrowLeft,
   Camera,
   MapPin,
   MessageCircle,
@@ -9,11 +7,11 @@ import {
   Phone,
   Send,
 } from "lucide-react";
+
 import { businessInfo } from "../data/content";
+import Footer from "../components/Footer";
 
 export default function CardPage() {
-  const [showMap, setShowMap] = useState(false);
-
   return (
     <main className="min-h-screen bg-[#010409] text-white">
       <div
@@ -22,44 +20,37 @@ export default function CardPage() {
           backgroundImage: "url('/background.png')",
         }}
       >
-        <div className="relative overflow-hidden min-h-screen bg-black/30 px-6 py-8 flex flex-col">
-          {/* Декоративный ключ как на главной */}
-          <div className="absolute right-[-135px] top-[40px] opacity-[0.16] pointer-events-none blur-[0.6px] z-0">
+        <div className="relative overflow-hidden min-h-screen bg-black/28 px-8 pt-16 pb-10 flex flex-col">
+          {/* Декоративный ключ — как на главной */}
+          <div className="absolute right-[-135px] top-[-30px] opacity-[0.16] pointer-events-none blur-[0.6px] z-0">
             <img
               src="/key-vector.png"
               alt=""
               className="w-[370px] saturate-90 brightness-95"
             />
           </div>
-          {/* Верхняя часть */}
-          <header className="relative z-10 mb-8">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white transition mb-8"
-            >
-              <ArrowLeft size={19} />
-              <span className="text-sm font-medium">На главную</span>
-            </Link>
 
+          {/* Верх визитки */}
+          <header className="relative z-10 mb-10">
             <Link to="/" className="block w-fit">
               <img
                 src="/hero.png"
                 alt="KEY MASTER"
-                className="w-[155px] mb-7"
+                className="w-[170px] mb-10"
               />
             </Link>
 
-            <h1 className="text-[30px] leading-[1.08] font-[700] tracking-[-0.03em] uppercase max-w-[320px]">
-              Контакты Key Master
+            <h1 className="text-[31px] leading-[1.12] font-[700] tracking-[-0.03em] mb-5 max-w-[310px] uppercase">
+              Контакты
             </h1>
 
-            <p className="mt-4 text-[#d5d7dc] text-[16px] leading-[1.5] font-[400] max-w-[330px]">
+            <p className="text-[#d5d7dc] text-[18px] leading-[1.45] font-[500] max-w-[340px]">
               Быстрая связь с мастером: звонок, мессенджеры и адрес на карте.
             </p>
           </header>
 
           {/* Карточка контактов */}
-          <section className="relative z-10 glass-card rounded-[26px] p-6 mb-8">
+          <section className="relative z-10 glass-card rounded-[26px] p-6 mb-0">
             <div className="space-y-5 mb-6">
               <div className="flex flex-col gap-5 mb-6">
                 <a
@@ -100,7 +91,7 @@ export default function CardPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <MapPin className="blue-icon mt-1 shrink-0" size={24} />
+                <MapPin className="blue-icon mt-1 shrink-0" size={27} />
 
                 <div>
                   <p className="text-sm text-white/55 font-medium mb-1">
@@ -185,42 +176,28 @@ export default function CardPage() {
               </a>
             </div>
 
-            <button
-              type="button"
-              onClick={() => setShowMap((prev) => !prev)}
-              className="outline-button"
-            >
-              <MapPin size={20} />
-              {showMap ? "Скрыть карту" : "Показать карту"}
-            </button>
-
-            <div
-              className={`overflow-hidden transition-all duration-500 ${
-                showMap ? "max-h-[520px] opacity-100 mt-5" : "max-h-0 opacity-0"
-              }`}
-            >
-              <div className="rounded-[22px] overflow-hidden border border-white/10">
-                <iframe
-                  title="KEY MASTER location"
-                  src={businessInfo.mapEmbed}
-                  width="100%"
-                  height="320"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+            {/* Статичная карта */}
+            <div className="mt-5 rounded-[22px] overflow-hidden border border-white/10">
+              <iframe
+                title="KEY MASTER location"
+                src={businessInfo.mapEmbed}
+                width="100%"
+                height="320"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </section>
+          <div className="relative z-10 mt-10">
+            <Link to="/" className="outline-button">
+              Перейти на главную
+            </Link>
+          </div>
 
-          {/* Переход на основной сайт */}
-          <Link to="/" className="relative z-10 outline-button mt-auto">
-            Посмотреть услуги и примеры работ
-          </Link>
-
-          <p className="relative z-10 text-center text-white/40 text-xs mt-6">
-            KEY MASTER © 2026
-          </p>
+          <div className="relative z-10 mt-10">
+            <Footer className="pt-0 pb-12" />
+          </div>
         </div>
       </div>
     </main>

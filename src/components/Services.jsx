@@ -1,7 +1,7 @@
-import { Car, Cpu, KeyRound, LockKeyhole, RadioTower } from "lucide-react";
+import { Car, KeyRound, LockOpen, RadioTower, RotateCcw } from "lucide-react";
 import { services } from "../data/content";
 
-const icons = [KeyRound, Car, LockKeyhole, RadioTower];
+const icons = [KeyRound, LockOpen, Car, RotateCcw, RadioTower];
 
 export default function Services() {
   return (
@@ -15,7 +15,11 @@ export default function Services() {
 
             return (
               <div key={index} className="flex items-center gap-6">
-                <Icon size={30} strokeWidth={2.1} className="blue-icon shrink-0" />
+                <Icon
+                  size={30}
+                  strokeWidth={2.1}
+                  className="blue-icon shrink-0"
+                />
 
                 <p className="text-[17px] font-medium leading-snug">
                   {service}
