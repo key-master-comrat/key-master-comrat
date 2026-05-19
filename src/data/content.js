@@ -17,7 +17,7 @@ export const businessInfo = {
 
   viberLink: "viber://chat?number=%2B37379447805",
   whatsappLink: "https://wa.me/37379447805",
-  telegramLink: "tg://resolve?phone=37379447805",
+  telegramLink: "https://t.me/maximmanolov12",
 
   instagramLink: "https://www.instagram.com/master_key_comrat/",
   tiktokLink: "https://www.tiktok.com/@keymaster.md",
