@@ -6,7 +6,7 @@ const icons = [KeyRound, LockOpen, Car, RotateCcw, RadioTower];
 export default function Services() {
   return (
     <section className="page-section">
-      <div className="glass-card rounded-[26px] px-8 py-7">
+      <div className="glass-card w-full rounded-[26px] p-8">
         <h2 className="section-title mb-6">Услуги</h2>
 
         <div className="space-y-4">
@@ -14,9 +14,12 @@ export default function Services() {
             const Icon = icons[index];
 
             return (
-              <div key={index} className="flex items-center gap-6">
+              <div
+                key={index}
+                className="grid grid-cols-[34px_1fr] items-center gap-5"
+              >
                 <Icon
-                  size={30}
+                  size={34}
                   strokeWidth={2.1}
                   className="blue-icon shrink-0"
                 />
