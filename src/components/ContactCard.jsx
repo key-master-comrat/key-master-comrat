@@ -11,7 +11,9 @@ import { businessInfo } from "../data/content";
 
 export default function ContactCard({ className = "" }) {
   return (
-    <div className={`glass-card rounded-[26px] p-6 ${className}`}>
+    <div
+      className={`glass-card rounded-[26px] p-8 overflow-hidden ${className}`}
+    >
       {/* Телефоны */}
       <div className="flex flex-col gap-6 mb-7">
         <a
@@ -56,9 +58,7 @@ export default function ContactCard({ className = "" }) {
         <MapPin className="blue-icon shrink-0" size={34} />
 
         <div>
-          <p className="text-sm text-gray-400 font-medium mb-1">
-            Адрес
-          </p>
+          <p className="text-sm text-gray-400 font-medium mb-1">Адрес</p>
 
           <p className="text-white font-medium leading-[1.5]">
             {businessInfo.address}
@@ -121,7 +121,7 @@ export default function ContactCard({ className = "" }) {
       </div>
 
       {/* Статичная карта */}
-      <div className="rounded-[22px] overflow-hidden border border-white/10">
+      <div className="-mx-8 -mb-8 mt-6 overflow-hidden border-t border-white/10">
         <iframe
           title="KEY MASTER location"
           src={businessInfo.mapEmbed}

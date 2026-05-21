@@ -15,14 +15,24 @@ export default function HomePage() {
           backgroundImage: "url('/background.png')",
         }}
       >
-        <div className="min-h-screen bg-black/28">
-          <Hero />
-          <Services />
-          <WhyUs />
-          <Slogan />
-          <Contacts />
-          <div className="mt-14">
-            <Footer />
+        <div className="relative min-h-screen bg-black/28 overflow-hidden">
+          <div className="absolute right-[-135px] top-[-30px] opacity-[0.16] pointer-events-none blur-[0.6px] z-0">
+            <img
+              src="/key-vector-full.svg"
+              alt=""
+              className="w-[370px] max-w-none saturate-90 brightness-95"
+            />
+          </div>
+
+          <div className="relative z-10">
+            <Hero />
+            <Services />
+            <WhyUs />
+            <Slogan />
+            <Contacts />
+            <div className="mt-14">
+              <Footer />
+            </div>
           </div>
         </div>
       </div>

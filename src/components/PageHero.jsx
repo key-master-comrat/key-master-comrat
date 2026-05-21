@@ -15,15 +15,6 @@ export default function PageHero({
     <section
       className={`relative bg-transparent text-white px-8 pt-16 pb-10 ${className}`}
     >
-      {/* Декоративный ключ — единый для главной и contacts */}
-      <div className="absolute right-[-135px] top-[-30px] opacity-[0.16] pointer-events-none blur-[0.6px] z-0">
-        <img
-          src="/key-vector.png"
-          alt=""
-          className="w-[370px] max-w-none saturate-90 brightness-95"
-        />
-      </div>
-
       <div className="relative z-10">
         {logoTo ? (
           <Link to={logoTo} className="block w-fit">

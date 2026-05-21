@@ -40,7 +40,7 @@ body {
 /* ===== LAYOUT ===== */
 
 .page-section {
-  padding: 42px 22px;
+  padding: 42px 0;
   position: relative;
 }
 

@@ -1,3 +1,4 @@
+import { businessInfo } from "../data/content";
 export default function Footer({ className = "" }) {
   return (
     <footer
@@ -12,12 +13,12 @@ export default function Footer({ className = "" }) {
         <br />
 
         <a
-          href="https://www.instagram.com/sledagency_/"
+          href={businessInfo.footerLink}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 font-semibold underline underline-offset-4 hover:text-[#3B93FF] transition"
         >
-          SLED — Агентство цифровых решений
+          {businessInfo.footerName}
         </a>
       </p>
     </footer>

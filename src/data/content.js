@@ -31,6 +31,9 @@ export const businessInfo = {
 
   mapEmbed:
     "https://maps.google.com/maps?q=Master-key%20Comrat&t=k&z=17&output=embed",
+
+  footerName: "Digital Sled",
+  footerLink: "https://www.instagram.com/sledagency_/",
 };
 export const services = [
   "Дубликаты ключей авто/квартир",
