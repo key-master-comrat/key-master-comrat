@@ -33,7 +33,7 @@ export const businessInfo = {
     "https://maps.google.com/maps?q=Master-key%20Comrat&t=k&z=17&output=embed",
 
   footerName: "Digital Sled",
-  footerLink: "https://www.instagram.com/sledagency_/",
+  footerLink: "https://www.instagram.com/digitalsled.md?igsh=ZDBndDI0MzB6NWhi",
 };
 export const services = [
   "Дубликаты ключей авто/квартир",
